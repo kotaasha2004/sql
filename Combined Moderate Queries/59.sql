@@ -1,3 +1,4 @@
-select name,hire_date from emp
-where hire_date>=dateadd(year,-2,GETDATE())
-order by hire_date
+SELECT *
+FROM Employee
+WHERE hire_date >= DATE_SUB(CURDATE(), INTERVAL 2 YEAR)
+ORDER BY hire_date;
